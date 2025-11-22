@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Profile Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      font-family: Arial, sans-serif;
+    }.card {
+  width: 320px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(40px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 4px solid #2575fc;
+  animation: pop 0.8s ease-in-out forwards;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h2 {
+  margin: 10px 0 5px;
+  font-size: 22px;
+}
+
+p {
+  margin: 0;
+  color: #555;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #2575fc;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #6a11cb;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="profile-img">
+      <img src="C:\Users\RAJ SONI\Downloads\Myphoto.jpg.jpeg" alt="Profile Image" />
+    </div>
+    <h2>Raj Soni</h2>
+    <p>Front-End Developer | Student</p>
+    <a href="https://www.instagram.com/raj_seth_07?igsh=MW5mbTQzYmswZ3I2cg" class="btn" target="_blank">Follow</a>
+  </div>
+</body>
+</html>
